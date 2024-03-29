@@ -8,10 +8,121 @@ body {
     color: #fff;
 }
 
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 12vw;
+    z-index: 10;
+    background-color: rgba(17, 17, 17, 0.9);
+    transition: all .5s ease-in-out;
+}
+
+.nav-part2 {
+    display: flex;
+    column-gap: 1vw;
+}
+
+.nav-part2 h4 {
+    font-size: 0.8vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+#nav-bottom {
+    width: 76%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid #dadada;
+    z-index: 9;
+    transition: all .5s ease-in-out;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 14.3vw;
+    background: rgba(17, 17, 17, 0.95);
+}
+
+.bottom-div {
+    transition: all .3s ease-in-out;
+}
+
+.bottom-div h5 {
+    margin-bottom: 0.4vw;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.bottom-div:last-child h5:last-child {
+    margin-top: 2.5rem;
+}
+
+.bottom-div h5 span {
+    font-size: 0.8vw;
+    font-weight: 500;
+}
+
+nav:hover .bottom-div h5 {
+    opacity: 1;
+}
+
+nav:hover #nav-bottom {
+    height: 150%;
+    bottom: -150%;
+}
+
+.nav-part2 h4:hover {
+    color: #8c8a8a;
+}
+
+.bottom-div h5:hover {
+    color: #8c8a8a;
+}
+
+nav button {
+    background-color: #0BA34E;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 140px;
+    padding: 1rem 0 1rem 1rem;
+    border-radius: 50px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .6s ease;
+    text-transform: uppercase;
+}
+
+nav button svg {
+    position: absolute;
+    right: 0;
+    border-radius: 50px;
+    width: 2.2vw;
+    height: 2.2vw;
+    background-color: #0BA34E;
+}
+
+nav button:hover {
+    background-color: transparent;
+}
+
+
+
+
+
+
 #page1 {
     width: 100%;
     height: 100vh;
-    background-color: #111;
+    background-color: rgb(17, 17, 17);
     display: flex;
     flex-direction: column;
     align-items: center;
