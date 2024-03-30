@@ -8,6 +8,7 @@ body {
     color: #fff;
 }
 
+/* nav start */
 nav {
     position: fixed;
     width: 100%;
@@ -103,9 +104,10 @@ nav button:hover {
     border-bottom: 1px solid #fff;
 }
 
+/* nav end */
 
 
-
+/* page1 start */
 #page1 {
     width: 100%;
     height: 100vh;
@@ -158,10 +160,56 @@ nav button:hover {
     padding: 0;
 }
 
+#moving-div {
+    margin-top: 10vh;
+    position: absolute;
+    bottom: 5vh;
+    width: 40%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+}
 
+#moving-div .move {
+    display: inline-block;
+    animation: move 10s linear infinite;
+}
 
+#moving-div .move img {
+    height: 1.5vw;
+    margin: 0 1.2vw;
+}
 
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }    
+}
 
+#blur-left {
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(to right, #111, transparent);
+}
+
+#blur-right {
+    height: 100%;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(to right, transparent, #111);
+}
+
+/* page1 end */
 
 
 
