@@ -6,6 +6,7 @@
 
 body {
     color: #fff;
+    background-color: #111;
 }
 
 /* nav start */
@@ -213,10 +214,125 @@ nav button:hover {
 
 
 
-
+/* page2 start */
 
 #page2 {
-    width: 100%;
+    width: calc(100% - 24vw);
     height: 100vh;
     background-color: #111;
+    position: relative;
+    padding: 2vw 0 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    margin: auto;
 }
+
+#page2-left {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3vw 0;
+}
+
+#page2-left p {
+    font-size: 0.8vw;
+}
+
+#page2-left h5 {
+    font-size: 0.9vw;
+    font-weight: 400;
+    width: 60%;
+    letter-spacing: 1px;
+}
+
+
+#page2-right {
+    height: 100%;
+    width: 50%;
+}
+
+.right-elem {
+    position: relative;
+    padding-top: 1.5vw;
+    padding-bottom: 5vw;
+    border-bottom: 1px solid #333;
+    transition: all .4s ease;
+}
+
+.right-elem:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.right-elem h2 {
+    font-size: 1.4vw;
+    font-weight: 400;
+}
+
+.right-elem-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.right-elem-text span {
+    color: #666666;
+    margin-right: -50px;
+}
+
+.right-elem img {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+}
+
+.elem-arrow {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.elem-arrow .svg-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .4s ease-out;
+    width: 20px;
+    height: 20px;
+}
+
+.elem-arrow .svg-2 {
+    position: absolute;
+    transform: translate(-50px, 50px);
+    transition: all .4s ease;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.right-elem:hover .elem-arrow .svg-1 {
+    top: -30px;
+    transform: translateX(30px);
+}
+
+.right-elem:hover .elem-arrow .svg-2 {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+
+
+
+/* page2 end */
