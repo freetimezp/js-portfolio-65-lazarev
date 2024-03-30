@@ -11,18 +11,26 @@ body {
 nav {
     position: fixed;
     width: 100%;
+    height: 11vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 2vw 12vw;
     z-index: 10;
     background-color: rgba(17, 17, 17, 0.9);
-    transition: all .5s ease-in-out;
+}
+
+nav h1 {
+    font-size: 1.6vw;
 }
 
 .nav-part2 {
     display: flex;
     column-gap: 1vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
 }
 
 .nav-part2 h4 {
@@ -30,59 +38,30 @@ nav {
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
+    margin-bottom: 2vw;
     transition: all .3s ease-in-out;
 }
 
-#nav-bottom {
-    width: 76%;
-    height: 0;
-    position: absolute;
-    bottom: 0;
-    border-bottom: 1px solid #dadada;
-    z-index: 9;
-    transition: all .5s ease-in-out;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 0 14.3vw;
-    background: rgba(17, 17, 17, 0.95);
+.nav-part2 h4:hover{
+    color: #a3a2a2;
 }
 
-.bottom-div {
-    transition: all .3s ease-in-out;
-}
-
-.bottom-div h5 {
-    margin-bottom: 0.4vw;
-    opacity: 0;
-    transition: all .3s ease-in-out;
+.nav-part2 h5 {
+    margin-bottom: 1vw;
+    display: none;
     cursor: pointer;
+    overflow: hidden;
 }
 
-.bottom-div:last-child h5:last-child {
-    margin-top: 2.5rem;
+.nav-part2 h5:hover{
+    color: #a3a2a2;
 }
 
-.bottom-div h5 span {
+.nav-part2 h5 span {
     font-size: 0.8vw;
-    font-weight: 500;
-}
-
-nav:hover .bottom-div h5 {
-    opacity: 1;
-}
-
-nav:hover #nav-bottom {
-    height: 150%;
-    bottom: -150%;
-}
-
-.nav-part2 h4:hover {
-    color: #8c8a8a;
-}
-
-.bottom-div h5:hover {
-    color: #8c8a8a;
+    font-weight: 400;
+    transform: translateY(-25px);
+    display: inline-block;
 }
 
 nav button {
@@ -91,7 +70,7 @@ nav button {
     align-items: center;
     position: relative;
     width: 140px;
-    padding: 1rem 0 1rem 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     border-radius: 50px;
     color: #fff;
     border: none;
@@ -105,8 +84,8 @@ nav button svg {
     position: absolute;
     right: 0;
     border-radius: 50px;
-    width: 2.2vw;
-    height: 2.2vw;
+    width: 1.5vw;
+    height: 1.5vw;
     background-color: #0BA34E;
 }
 
@@ -114,7 +93,15 @@ nav button:hover {
     background-color: transparent;
 }
 
-
+#nav-bottom {
+    width: 76%;
+    height: 0vh;
+    background-color: rgba(17, 17, 17, 0.9);
+    z-index: -1;
+    position: absolute;
+    top: 100%;
+    border-bottom: 1px solid #fff;
+}
 
 
 
