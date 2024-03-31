@@ -111,16 +111,18 @@ page3VideoAnimation();
 
 
 //button animation 
-let btn = document.querySelector(".btn-wrapper button .str-1").textContent;
-let btn2 = document.querySelector(".btn-wrapper button .str-2").textContent;
-var text_wrapped = btn.replace(/\w/g, '<span>$&</span>');
-var text_wrapped2 = btn2.replace(/\w/g, '<span>$&</span>');
+function page4TextAnimation() {
+    let btn = document.querySelector(".btn-wrapper button .str-1").textContent;
+    let btn2 = document.querySelector(".btn-wrapper button .str-2").textContent;
+    var text_wrapped = btn.replace(/\w/g, '<span>$&</span>');
+    var text_wrapped2 = btn2.replace(/\w/g, '<span>$&</span>');
 
 
-document.querySelector('.hoverBtn .str-1').innerHTML = text_wrapped;
-document.querySelector('.hoverBtn .str-2').innerHTML = text_wrapped2;
+    document.querySelector('.hoverBtn .str-1').innerHTML = text_wrapped;
+    document.querySelector('.hoverBtn .str-2').innerHTML = text_wrapped2;
+}
 
-
+page4TextAnimation();
 
 
 
