@@ -83,7 +83,6 @@ function page3VideoAnimation() {
             borderRadius: 0
         });
     });
-
     video.addEventListener("click", function () {
         video.pause();
         gsap.to(video, {
@@ -92,10 +91,34 @@ function page3VideoAnimation() {
             borderRadius: "30px"
         });
     });
+
+    var sections = document.querySelectorAll(".sec-right");
+
+    sections.forEach(function (elem) {
+        elem.addEventListener("mouseenter", function () {
+            elem.childNodes[3].style.opacity = 1;
+            elem.childNodes[3].play();
+        });
+        elem.addEventListener("mouseleave", function () {
+            elem.childNodes[3].style.opacity = 0;
+            elem.childNodes[3].load();
+        });
+    });
+
 }
 
 page3VideoAnimation();
 
+
+//button animation 
+let btn = document.querySelector(".btn-wrapper button .str-1").textContent;
+let btn2 = document.querySelector(".btn-wrapper button .str-2").textContent;
+var text_wrapped = btn.replace(/\w/g, '<span>$&</span>');
+var text_wrapped2 = btn2.replace(/\w/g, '<span>$&</span>');
+
+
+document.querySelector('.hoverBtn .str-1').innerHTML = text_wrapped;
+document.querySelector('.hoverBtn .str-2').innerHTML = text_wrapped2;
 
 
 
